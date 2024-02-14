@@ -1,0 +1,18 @@
+import java.util.*;
+ class Solution {
+    // int I=1;
+    // int V=5;
+    // int X=10;
+    // int L=50;
+    // int C=100;
+    // int D=500;
+    // int M=1000;
+    public static void main(String[] args){
+      
+       System.out.println("enter number=");
+       Scanner sc = new Scanner(System.in);
+      int str =sc.nextInt();
+     
+
+    }
+}
