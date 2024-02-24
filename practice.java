@@ -1,57 +1,38 @@
 public class practice {
     
-    static int findMax(int[] arr){
-        int mx=Integer.MIN_VALUE;
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>=mx){
-                mx=arr[i];
-            }
+    public static void mazepath(int cr,int cc,int dr,int dc, String ans){
+        if(cr==dr && cc==dc){
+            System.out.println(ans);
+            return;
         }
-        return mx;
+
+        if(cr > dr || cc > dc) {
+            return;
+        }
+
+        mazepath( cr+1, cc, dr, dc, ans+'V');
+        mazepath( cr, cc+1, dr, dc, ans+'H');
     }
 
-    static void countSort(int[] arr,int place){
-        int n=arr.length;
-
-        int[] output=new int[n];
-        int[] count=new int[10];
-
-        for(int i=0;i<arr.length;i++){
-            count[(arr[i]/place)%10]++;
+    public static void dice_path(int current,int distination, String path)
+    {
+        if(current>distination){
+            return;
         }
-
-        for(int i=1;i<count.length;i++){
-            count[i]+=count[i-1];
+        if(current==distination){
+            System.out.println(path);
         }
+        dice_path( current+1, distination,  path+1);
+        dice_path( current+2, distination,  path+2);
+        dice_path( current+3, distination,  path+3);
+        dice_path( current+4, distination,  path+4);
+        dice_path( current+5, distination,  path+5);
+        dice_path( current+6, distination,  path+6);
 
-        for(int i=n-1;i>=0;i--){
-            int idx=count[(arr[i]/place)%10]-1;
-            output[idx]=arr[i];
-            count[(arr[i]/place)%10]--;
-        }
-
-        for(int i=0;i<n;i++){
-            arr[i]=output[i];
-        }
-    }
-
-    static void radixSort(int[] arr){
-        int maxlength=findMax(arr);
-        for(int place=1;maxlength/place>0;place*=10){
-            countSort(arr,place);
-        }
-    }
-
-    static void display(int[] arr){
-        System.out.println("Sorted array2:-");
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
-        }
     }
 
     public static void main(String[] args){
-        int[] arr={9,35,86,35,90,32,12,4};
-        radixSort(arr);
-        display(arr);
+        // mazepath( 0, 0, 2, 2, "");
+        dice_path(0,5, "");
     }
 }

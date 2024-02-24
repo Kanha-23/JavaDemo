@@ -25,7 +25,7 @@ public class mergesort {
         while(j<n2)
             arr[k++]=right[j++];
     }
-//this will give the sorted array
+        //this will give the sorted array
     static void mergeSort(int[] arr,int l,int r){
         if(l>=r) return;
         int mid=(l+r)/2;
@@ -43,11 +43,10 @@ public class mergesort {
     public static void main(String[] args){
         int[] arr={4,1,3,5,2};
         int n = arr.length;
-        System.out.println("array befor sorting");
+        System.out.println("array before sorting");
         display(arr);
         mergeSort(arr,0,n-1);
         System.out.println("array after sorting");
         display(arr);
     }
-
 }
