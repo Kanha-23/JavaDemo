@@ -7,7 +7,7 @@ class Student1 //extends Object
     public Student1()
     {
        // super();
-       this("Rohit", 19);
+       this("Rohit", 17);
         System.out.println("Default Constructor is called");
         name="Rohan";
         age=18;
