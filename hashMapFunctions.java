@@ -21,6 +21,7 @@ class hashMapFunctions {
 
         // functionality of the remove() function
         hashmap.remove(1);
+        
         System.out.println("Updated hashmap: "+hashmap);
 
         // iterating using the for loop

@@ -29,6 +29,8 @@ public class stack1 {
             
              ft.push(rt.pop());
          }
+         int s=ft.size();
          System.out.println("Final copied stack:" + ft);
+         System.out.println("size of stack=" + s);
     }
 }
