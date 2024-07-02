@@ -11,7 +11,7 @@ public class Hashset {
         st.add("Mevada");
         st.add("kanha"); 
         System.out.println(st);
-        System.out.println(st.contains("kanha"));
+        System.out.println(st.contains("kanha the"));
         System.out.println(st.size());
         st.remove("kanha");
         System.out.println(st.size()); 
