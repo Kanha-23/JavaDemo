@@ -7,14 +7,14 @@ import java.util.*;
 public class Hashset {
     public static void main(String[] args) {
         HashSet<String> st=new HashSet<>();
-        st.add("kanha");
+        st.add("kanha the great");
         st.add("Mevada");
-        st.add("kanha");
+        st.add("kanha"); 
         System.out.println(st);
         System.out.println(st.contains("kanha"));
         System.out.println(st.size());
         st.remove("kanha");
-        System.out.println(st.size());
+        System.out.println(st.size()); 
         st.add("Yug");
         st.add("Neel");
         //to traverse here we dont need entryset as we only have keys here
